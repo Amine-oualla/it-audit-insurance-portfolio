@@ -8,7 +8,8 @@
      ```sql
      SELECT 
          numero_contrat,
-         date_sinistre,         type_sinistre,
+         date_sinistre,         
+         type_sinistre,
          COUNT(*) AS nb_doublons
      FROM Sinistre
      GROUP BY numero_contrat, date_sinistre, type_sinistre
@@ -86,6 +87,7 @@
 
 
 04_Exemples_règles_de_validation_métier:
+  
   1.Montant d’indemnisation
 Montant > 0
 
