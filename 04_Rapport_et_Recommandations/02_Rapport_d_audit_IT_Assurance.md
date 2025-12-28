@@ -1,111 +1,184 @@
-# 02 – Constats et risques
+# 02 – Rapport d’audit IT – Système de gestion des sinistres
 
 ## 1. Introduction
 
-Cette section présente les constats issus des tests et analyses réalisés dans le cadre de la mission d’audit IT.  
-Chaque constat est associé à un risque, une cause probable, un impact potentiel et une évaluation de criticité.  
-Ces éléments constituent la base du rapport final et du plan d’action.
+Ce rapport présente les résultats de la mission d’audit IT portant sur le système de gestion des sinistres de la compagnie d’assurance.  
+L’objectif de la mission est d’évaluer :
+
+- la sécurité du système  
+- la qualité et l’intégrité des données  
+- la gouvernance IT et IA  
+- la robustesse des processus  
+- la continuité d’activité  
+
+Le rapport s’appuie sur :
+
+- le diagnostic initial  
+- la cartographie des risques  
+- le plan de travail validé  
+- les tests techniques et analyses de données  
+- les entretiens avec les équipes IT, Sécurité, Data et Métiers  
 
 ---
 
-## 2. Constat 1 – Habilitations excessives
+## 2. Synthèse exécutive
 
-### 🔹 Description du constat
-Plusieurs utilisateurs disposent d’habilitations supérieures à leurs besoins opérationnels (accès transverses, droits d’administration non justifiés).
+L’audit met en évidence un niveau global de maîtrise **partiel**, avec plusieurs points forts mais aussi des risques significatifs nécessitant des actions prioritaires.
 
-### 🔹 Risque associé
-Accès non autorisé à des données sensibles, fraude interne, violation RGPD.
+### 🔹 Points forts observés
+- Architecture applicative globalement stable  
+- Collaboration efficace entre équipes IT et métiers  
+- Existence d’un PRA documenté  
+- Modèle IA performant sur les cas standards  
 
-### 🔹 Cause probable
-Absence de revue périodique des habilitations, manque de séparation des tâches.
+### 🔹 Points de vigilance majeurs
+- Habilitations excessives et absence de revue périodique  
+- Traçabilité incomplète des actions sensibles  
+- Incohérences dans les données sinistres  
+- Gouvernance IA insuffisante  
+- PRA non testé récemment  
 
-### 🔹 Impact potentiel
-Fuite de données, erreurs critiques, non‑conformité réglementaire.
-
-### 🔹 Criticité
-Élevée
-
----
-
-## 3. Constat 2 – Traçabilité insuffisante des actions sensibles
-
-### 🔹 Description du constat
-Les logs applicatifs ne tracent pas toutes les actions critiques (modifications de données, accès privilégiés).
-
-### 🔹 Risque associé
-Impossibilité de reconstituer un incident ou une fraude.
-
-### 🔹 Cause probable
-Configuration incomplète des journaux, absence de supervision.
-
-### 🔹 Impact potentiel
-Détection tardive d’incidents, non‑conformité RGPD/ACPR.
-
-### 🔹 Criticité
-Élevée
+### 🔹 Conclusion générale
+Le système est fonctionnel et relativement mature, mais plusieurs faiblesses exposent l’organisation à des risques opérationnels, réglementaires et de fraude.  
+Des actions correctives prioritaires sont recommandées.
 
 ---
 
-## 4. Constat 3 – Incohérences dans les données sinistres
+## 3. Périmètre de l’audit
 
-### 🔹 Description du constat
-Présence d’incohérences dans les données : dates incorrectes, doublons, montants atypiques.
+L’audit couvre :
 
-### 🔹 Risque associé
+- le système de gestion des sinistres (application principale)  
+- les bases de données associées  
+- les processus IT (incidents, changements, accès, sauvegardes)  
+- les modèles IA de détection de fraude  
+- les environnements (Prod / Préprod / Dev)  
+- le PRA / PCA  
+
+Ne sont pas inclus :
+
+- les applications hors périmètre sinistres  
+- les processus métiers non liés au traitement des sinistres  
+
+---
+
+## 4. Méthodologie
+
+La mission a été réalisée selon les standards :
+
+- ITGC (IT General Controls)  
+- ISO 27001  
+- RGPD  
+- ACPR – Gouvernance des algorithmes  
+- Bonnes pratiques d’audit interne (IIA)  
+
+Les travaux incluent :
+
+- revue documentaire  
+- tests techniques IT  
+- analyses de données (SQL, Excel, Python)  
+- entretiens avec les équipes  
+- revue des logs et configurations  
+- analyse des performances du modèle IA  
+
+---
+
+## 5. Résultats détaillés de l’audit
+
+### 5.1 Gestion des habilitations – **Criticité : Élevée**
+
+**Constat :**  
+Des utilisateurs disposent d’habilitations supérieures à leurs besoins, et aucune revue périodique n’est réalisée.
+
+**Risques :**  
+Accès non autorisé, fraude interne, violation RGPD.
+
+**Recommandations :**  
+- Mettre en place une revue trimestrielle des accès  
+- Appliquer le principe du moindre privilège  
+- Supprimer les comptes inactifs  
+
+---
+
+### 5.2 Traçabilité et logs – **Criticité : Élevée**
+
+**Constat :**  
+Les actions sensibles ne sont pas toutes tracées (modifications, accès privilégiés).
+
+**Risques :**  
+Impossibilité d’investigation, non‑conformité, détection tardive d’incidents.
+
+**Recommandations :**  
+- Activer la journalisation complète  
+- Intégrer les logs au SOC  
+- Définir une politique de rétention  
+
+---
+
+### 5.3 Qualité des données – **Criticité : Moyenne à Élevée**
+
+**Constat :**  
+Présence d’incohérences : dates incorrectes, doublons, montants atypiques.
+
+**Risques :**  
 Décisions erronées, fraude non détectée, reporting faussé.
 
-### 🔹 Cause probable
-Erreurs de saisie, absence de contrôles automatiques robustes.
-
-### 🔹 Impact potentiel
-Perte financière, mauvaise expérience client, non‑conformité.
-
-### 🔹 Criticité
-Moyenne à élevée
+**Recommandations :**  
+- Renforcer les règles de validation  
+- Mettre en place un monitoring qualité  
+- Automatiser la détection des doublons  
 
 ---
 
-## 5. Constat 4 – Gouvernance IA insuffisante
+### 5.4 Gouvernance IA – **Criticité : Élevée**
 
-### 🔹 Description du constat
-Le modèle IA de détection de fraude manque de documentation, de versioning et de suivi de performance.
+**Constat :**  
+Le modèle IA manque de documentation, de versioning et de suivi de performance.
 
-### 🔹 Risque associé
-Dérive du modèle, augmentation des faux négatifs, biais algorithmique.
+**Risques :**  
+Dérive du modèle, biais, augmentation des faux négatifs.
 
-### 🔹 Cause probable
-Absence de processus formel de gouvernance IA.
-
-### 🔹 Impact potentiel
-Fraude non détectée, décisions injustes, non‑conformité ACPR.
-
-### 🔹 Criticité
-Élevée
+**Recommandations :**  
+- Documenter le modèle (données, versions, métriques)  
+- Mettre en place un suivi mensuel  
+- Assurer une supervision humaine systématique  
 
 ---
 
-## 6. Constat 5 – PRA non testé récemment
+### 5.5 Continuité d’activité – **Criticité : Moyenne**
 
-### 🔹 Description du constat
-Le Plan de Reprise d’Activité (PRA) n’a pas été testé depuis plus de 18 mois.
+**Constat :**  
+Le PRA existe mais n’a pas été testé depuis plus de 18 mois.
 
-### 🔹 Risque associé
-Indisponibilité prolongée du système sinistres en cas d’incident majeur.
+**Risques :**  
+Indisponibilité prolongée en cas d’incident majeur.
 
-### 🔹 Cause probable
-Manque de coordination entre IT et métiers.
-
-### 🔹 Impact potentiel
-Arrêt de l’activité, perte financière, atteinte à la réputation.
-
-### 🔹 Criticité
-Moyenne
+**Recommandations :**  
+- Planifier un test annuel  
+- Documenter les résultats  
+- Vérifier les dépendances critiques  
 
 ---
 
-## 7. Conclusion
+## 6. Conclusion générale
 
-Les constats identifiés mettent en évidence des risques significatifs liés à la sécurité, à la qualité des données, à la gouvernance IA et à la continuité d’activité.  
-Ces constats serviront de base aux recommandations détaillées dans la section suivante.
+Le système de gestion des sinistres présente une base solide, mais plusieurs faiblesses doivent être corrigées rapidement pour garantir :
 
+- la sécurité des données  
+- la conformité réglementaire  
+- la performance du modèle IA  
+- la continuité d’activité  
+- la fiabilité du traitement des sinistres  
+
+Les recommandations proposées constituent un plan d’action réaliste et priorisé permettant d’améliorer significativement la maîtrise des risques IT.
+
+---
+
+## 7. Annexes (pour plus de détails voire le chapitre 06_Annexes)
+
+- Synthèse des tests réalisés  
+- Exemples de scripts SQL / Python  
+- Extraits de logs anonymisés  
+- Cartographie des risques  
+- Matrice de criticité  
 
