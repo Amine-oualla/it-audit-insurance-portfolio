@@ -1,8 +1,7 @@
 📁 04_Exemples_Scripts
 
  01_SQL_Examples.md
-     └── Contenu :
-
+     
      # 01 – Exemples de requêtes SQL
 
      ## 1. Détection de doublons de sinistres
@@ -33,29 +32,29 @@
      ```
 
 
-── 02_Excel_Examples.md (PS: A2 = date sinistre, B2 = date déclaration)
-│     └── Contenu :
-│
-│     # 02 – Exemples d’analyses Excel
-│
-│     ## 1. Détection des valeurs extrêmes (outliers)
-│     ```excel
-│     =SI(ABS(A2 - MOYENNE($A$2:$A$500)) > 3 * ECARTYPE($A$2:$A$500); "Outlier"; "")
-│     ```
-│
-│     ## 2. Vérification des doublons
-│     ```excel
-│     =NB.SI($A$2:$A$500; A2) > 1
-│     ```
-│
-│     ## 3. Contrôle de cohérence des dates
-│     ```excel
-│     =SI(B2 < A2; "Erreur"; "")
-│     ```
-│
-│
-└── 03_Python_Examples.md
-      └── Contenu :
+ 02_Excel_Examples.md (PS: A2 = date sinistre, B2 = date déclaration)
+   
+
+     # 02 – Exemples d’analyses Excel
+     
+     ## 1. Détection des valeurs extrêmes (outliers)
+     ```excel
+     =SI(ABS(A2 - MOYENNE($A$2:$A$500)) > 3 * ECARTYPE($A$2:$A$500); "Outlier"; "")
+     ```
+
+     ## 2. Vérification des doublons
+     ```excel
+     =NB.SI($A$2:$A$500; A2) > 1
+     ```
+
+     ## 3. Contrôle de cohérence des dates
+     ```excel
+     =SI(B2 < A2; "Erreur"; "")
+     ```
+
+
+ 03_Python_Examples.md
+    
       
       # 03 – Exemples de scripts Python
 
@@ -86,7 +85,7 @@
       ```
 
 
-5_Exemples_règles_de_validation_métier:
+04_Exemples_règles_de_validation_métier:
  5.1 Montant d’indemnisation
 Montant > 0
 
