@@ -1,40 +1,39 @@
 📁 04_Exemples_Scripts
-│
-├── 01_SQL_Examples.md
-│     └── Contenu :
-│
-│     # 01 – Exemples de requêtes SQL
-│
-│     ## 1. Détection de doublons de sinistres
-│     ```sql
-│     SELECT 
-│         numero_contrat,
-│         date_sinistre,
-│         type_sinistre,
-│         COUNT(*) AS nb_doublons
-│     FROM Sinistre
-│     GROUP BY numero_contrat, date_sinistre, type_sinistre
-│     HAVING COUNT(*) > 1;
-│     ```
-│
-│     ## 2. Dates incohérentes
-│     ```sql
-│     SELECT *
-│     FROM Sinistre
-│     WHERE date_declaration < date_sinistre
-│        OR date_cloture < date_declaration;
-│     ```
-│
-│     ## 3. Paiements sans sinistre associé
-│     ```sql
-│     SELECT p.*
-│     FROM Paiement p
-│     LEFT JOIN Sinistre s ON p.id_sinistre = s.id
-│     WHERE s.id IS NULL;
-│     ```
-│
-│
-├── 02_Excel_Examples.md (PS: A2 = date sinistre, B2 = date déclaration)
+
+ 01_SQL_Examples.md
+     └── Contenu :
+
+     # 01 – Exemples de requêtes SQL
+
+     ## 1. Détection de doublons de sinistres
+     ```sql
+     SELECT 
+         numero_contrat,
+         date_sinistre,         type_sinistre,
+         COUNT(*) AS nb_doublons
+     FROM Sinistre
+     GROUP BY numero_contrat, date_sinistre, type_sinistre
+     HAVING COUNT(*) > 1;
+     ```
+
+     ## 2. Dates incohérentes
+     ```sql
+     SELECT *
+     FROM Sinistre
+     WHERE date_declaration < date_sinistre
+        OR date_cloture < date_declaration;
+     ```
+
+     ## 3. Paiements sans sinistre associé
+     ```sql
+     SELECT p.*
+     FROM Paiement p
+     LEFT JOIN Sinistre s ON p.id_sinistre = s.id
+     WHERE s.id IS NULL;
+     ```
+
+
+── 02_Excel_Examples.md (PS: A2 = date sinistre, B2 = date déclaration)
 │     └── Contenu :
 │
 │     # 02 – Exemples d’analyses Excel
