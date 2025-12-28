@@ -2,9 +2,9 @@
 
  01_SQL_Examples.md
      
-     # 01 – Exemples de requêtes SQL
+      01 – Exemples de requêtes SQL:
 
-     ## 1. Détection de doublons de sinistres
+       1. Détection de doublons de sinistres:
      ```sql
      SELECT 
          numero_contrat,
@@ -15,7 +15,7 @@
      HAVING COUNT(*) > 1;
      ```
 
-     ## 2. Dates incohérentes
+       2. Dates incohérentes:
      ```sql
      SELECT *
      FROM Sinistre
@@ -23,7 +23,7 @@
         OR date_cloture < date_declaration;
      ```
 
-     ## 3. Paiements sans sinistre associé
+       3. Paiements sans sinistre associé:
      ```sql
      SELECT p.*
      FROM Paiement p
@@ -35,30 +35,30 @@
  02_Excel_Examples.md (PS: A2 = date sinistre, B2 = date déclaration)
    
 
-     # 02 – Exemples d’analyses Excel
+      02 – Exemples d’analyses Excel
      
-     ## 1. Détection des valeurs extrêmes (outliers)
+       1. Détection des valeurs extrêmes (outliers)
      ```excel
      =SI(ABS(A2 - MOYENNE($A$2:$A$500)) > 3 * ECARTYPE($A$2:$A$500); "Outlier"; "")
      ```
 
-     ## 2. Vérification des doublons
+       2. Vérification des doublons
      ```excel
      =NB.SI($A$2:$A$500; A2) > 1
      ```
 
-     ## 3. Contrôle de cohérence des dates
+       3. Contrôle de cohérence des dates
      ```excel
      =SI(B2 < A2; "Erreur"; "")
      ```
 
 
- 03_Python_Examples.md
+03_Python_Examples.md
     
       
-      # 03 – Exemples de scripts Python
+       03 – Exemples de scripts Python
 
-      ## 1. Détection de dérive du modèle IA
+        1. Détection de dérive du modèle IA
       ```python
       import pandas as pd
 
@@ -73,7 +73,7 @@
           print("Modèle stable")
       ```
 
-      ## 2. Analyse des logs pour détecter des accès suspects
+        2. Analyse des logs pour détecter des accès suspects
       ```python
       import pandas as pd
 
@@ -86,14 +86,14 @@
 
 
 04_Exemples_règles_de_validation_métier:
- 5.1 Montant d’indemnisation
+  1.Montant d’indemnisation
 Montant > 0
 
 Montant ≤ plafond du contrat
 
 Montant ≤ montant déclaré
 
- 5.2 Dates
+  2.Dates:
 Date sinistre ≤ date déclaration
 
 Date clôture ≥ date déclaration
