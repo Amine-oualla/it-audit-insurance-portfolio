@@ -88,7 +88,8 @@
 
 04_Exemples_règles_de_validation_métier:
   
-  1.Montant d’indemnisation
+  1.Montant d’indemnisation:
+
 Montant > 0
 
 Montant ≤ plafond du contrat
