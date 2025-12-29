@@ -1,4 +1,4 @@
-# **01 – Exemples_De_Requêtes_SQL.md**
+# **01 - Exemples De Requêtes SQL**
 
 ## 1. Détection de doublons de sinistres
 ```sql
@@ -31,7 +31,7 @@ WHERE s.id IS NULL;
 
 ---
 
-#  **02_Excel_Exemples.md**
+#  **02 - Excel Exemples**
 
    PS: A2 = date sinistre, B2 = date déclaration
 
@@ -54,7 +54,7 @@ WHERE s.id IS NULL;
 
 ---
 
-#  **03_Python_Examples.md**
+#  **03 - Python Examples**
 
 ## 1. Détection de dérive du modèle IA
 ```python
@@ -86,7 +86,7 @@ print(suspicious)
 
 ---
 
-#  **04_Exemples_regles_de_validation_metier.md**
+#  **04 - Exemples règles de validation metier**
 
 ## 1. Règles sur les montants d’indemnisation
 - Montant > 0  
