@@ -1,114 +1,51 @@
-#  Audit IT – Système de Gestion des Sinistres  
-### Portfolio professionnel – Amine Oualla
+# Audit IT — Système de Gestion des Sinistres
+### Dossier d'Audit Interne de Bout en Bout | Secteur Assurance
 
-Bienvenue dans mon portfolio d’audit IT, conçu comme un **vrai dossier d’audit interne** réalisé dans le secteur de l’assurance.  
-Ce projet démontre mes compétences en :
-
-- Audit IT & Cybersécurité  
-- Analyse de données (SQL, Python, Excel)  
-- Gouvernance IA & gestion des risques  
-- Contrôles ITGC & conformité (ISO 27001, RGPD, ACPR)  
-- Structuration d’un rapport d’audit complet  
-- Production de livrables professionnels  
-
-Ce portfolio a été construit pour refléter **une mission d’audit IT réelle**, avec un périmètre, un plan de travail, des tests, des analyses, un rapport final et un plan de suivi.
+Ce dépôt contient l'intégralité des livrables d'une mission d'audit interne modélisée selon les exigences du secteur de l'assurance. Le projet couvre l'évaluation des risques technologiques, la revue de conformité réglementaire, ainsi que la validation technique des données et des algorithmes d'un système de gestion des sinistres.
 
 ---
 
-#  Structure du projet
+## 📂 Organisation du Dossier d'Audit
 
-Le projet est organisé en 6 grands dossiers, comme dans un audit interne professionnel.
+Le projet reproduit fidèlement la démarche sectorielle d'une direction de l'audit interne à travers 6 modules :
 
-## 01 – Context & Diagnostic  
-Contient le contexte de la compagnie d’assurance, le périmètre de la mission et le diagnostic initial.  
- *Constitue la base de compréhension du système audité.*
+### 01 – Contexte & Diagnostic
+* Cartographie de l'écosystème applicatif et des flux de données.
+* Définition de la charte d'audit, du périmètre d'intervention et note de cadrage initiale.
 
-## 02 – Risk Assessment & Plan de travail  
-Cartographie des risques IT, risques cyber & IA, et plan de travail détaillé.  
- *Montre la capacité à structurer une mission d’audit.*
+### 02 – Risk Assessment & Plan de Travail
+* Matrice des risques IT, cybersécurité et IA (gouvernance, dérive de modèles, biais décisionnels).
+* Plan de campagne détaillé et programme de travail par cycle de contrôle.
 
-## 03 – Tests & Analyses  
-Programme de tests, analyses techniques, scripts SQL/Python/Excel.  
- *Démontre mes compétences techniques et analytiques.*
+### 03 – Tests & Analyses (Travaux de Terrain)
+* **Requêtes SQL :** Requêtes d'extraction et de rapprochement (recherche de paiements orphelins, doublons de tiers, ruptures de séquences chronologiques).
+* **Scripts Python :** Analyse automatisée des logs applicatifs et scripts de détection de dérive (*data drift*) sur les modèles de score.
+* **Scripts PowerShell :** Automatisation de la revue des privilèges Active Directory et des politiques de sécurité Windows Server.
 
-## 04 – Rapport & Recommandations  
-Fiches d’analyse, rapport d’audit complet, présentation orale synthétique.  
-📄 *Livrables finaux comme dans un vrai audit interne.*
+### 04 – Rapport & Recommandations
+* Fiches de constat structurées : Faits, Risques, Impacts (financiers, opérationnels, réputationnels) et Recommandations.
+* Rapport final d'audit et support de synthèse destiné au Comité d'Audit.
 
-## 05 – Suivi des recommandations  
-Plan de suivi, tableau de suivi, reperforming des tests.  
- *Montre la maîtrise du cycle complet d’audit.*
+### 05 – Suivi des Recommandations
+* Matrice de suivi des plans d'action (*Action Plan Tracking*).
+* Protocoles de *re-performing* pour valider l'efficacité des correctifs appliqués.
 
-## 06 – Annexes  
-Référentiels, concepts clés, sources documentaires, scripts d’entretiens, CSV fictifs, scripts PowerShell.  
- *Renforce la crédibilité et la profondeur du projet.*
-
----
-
-#  Objectifs du projet
-
-Ce portfolio a été conçu pour :
-
-- **montrer ma capacité à mener un audit IT de bout en bout**  
-- **démontrer mes compétences techniques (SQL, Python, PowerShell, Excel)**  
-- **illustrer ma compréhension des risques IT, Data, Cyber et IA**  
-- **produire des livrables professionnels et structurés**  
-- **me démarquer auprès des recruteurs en audit IT / banque / assurance / data / cybersécurité**
+### 06 – Annexes & Documentation
+* Protocoles d'entretiens métiers, jeux de données brutes (fichiers CSV anonymisés) et alignement avec les référentiels de place (ITGC, ISO 27001, RGPD, exigences ACPR).
 
 ---
 
-#  Compétences mises en avant
+## 🔧 Référentiels et Environnement Technique
 
-###  Audit IT & Cybersécurité
-- ITGC (accès, changements, sauvegardes, continuité)  
-- ISO 27001, RGPD, ACPR, COBIT  
-- Analyse des habilitations, logs, PRA/PCA  
-
-###  Data & Analyse
-- SQL (détection d’anomalies, qualité des données)  
-- Python (pandas, analyse de logs, dérive IA)  
-- Excel (contrôles, KPI, règles de validation)  
-
-###  IA & Gouvernance
-- Suivi de performance  
-- Détection de dérive  
-- Gestion des biais  
-- Supervision humaine  
-
-###  Gestion de projet & communication
-- Rapport d’audit complet  
-- Présentation synthétique type comité d’audit  
-- Plan de suivi et reperforming  
+* **Gouvernance & Conformité :** Contrôles Généraux Informatiques (ITGC), COBIT, ISO 27001, RGPD, Directives ACPR.
+* **Analyse de Données & Automatisation :** SQL, Python (Pandas), PowerShell, Excel (tableaux de bord croisés et validation de données).
+* **Supervision IA :** Indicateurs de performance algorithmique, détection des biais d'apprentissage et protocoles de supervision humaine.
 
 ---
 
-#  Contenu technique inclus
+## ✉️ Contact
 
-- Scripts SQL (doublons, incohérences, paiements orphelins…)  
-- Scripts Python (analyse de logs, dérive IA…)  
-- Scripts PowerShell (audit AD, logs Windows…)  
-- Fichiers CSV fictifs (sinistres, habilitations, logs…)  
-- Fiches d’analyse complètes (constat + risque + reco)  
-- Rapport d’audit IT complet  
-- Présentation orale synthétique  
-
----
-
-#  Contact
-
-**Amine Oualla**  
-Audit IT • Data • Assurance • Gouvernance IA  
-  Saint-Germain-en-Laye, France  
-  amineoualla481@gmail.com  
-🔗 LinkedIn : [![LinkedIn](https://img.shields.io/badge/LinkedIn-Amine%20Oualla-blue?logo=linkedin)](https://www.linkedin.com/in/amine-oualla2001)
- 
-
----
-
-#  Merci !
-
-Si ce projet vous a intéressé, n’hésitez pas à :  
--  mettre une étoile au repo  
--  me contacter pour échanger  
--  discuter d’opportunités en audit IT, data banque ou assurance  
-
+* **Amine Oualla**
+* **Localisation :** Saint-Germain-en-Laye, France
+* **Email :** [amineoualla69@gmail.com](mailto:amineoualla69@gmail.com)
+* **LinkedIn :** [linkedin.com/in/amine-oualla2001](https://www.linkedin.com/in/amine-oualla2001/)
